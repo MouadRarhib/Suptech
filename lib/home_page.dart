@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:suptechno2023tp1/favourite_page.dart';
 import 'package:suptechno2023tp1/generator_page.dart';
+import 'package:suptechno2023tp1/list.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -19,6 +20,9 @@ class _MyHomePageState extends State<MyHomePage> {
         break;
       case 1:
         page = FavoritesPage();
+        break;
+      case 2:
+        page = ListAllPage();
         break;
       default:
         throw UnimplementedError('no widget for $selectedIndex');
@@ -39,6 +43,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   NavigationRailDestination(
                     icon: Icon(Icons.favorite),
                     label: Text('Favorites'),
+                  ),
+                  NavigationRailDestination(
+                    icon: Icon(Icons.list),
+                    label: Text('List'),
                   ),
                 ],
                 selectedIndex: selectedIndex,

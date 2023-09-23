@@ -4,9 +4,11 @@ import 'package:flutter/material.dart';
 class MyAppState extends ChangeNotifier {
   var current = WordPair.random();
   var favorites = <WordPair>[];
+  var allPairs = <WordPair>[];
 
   void getNext() {
     current = WordPair.random();
+    allPairs.add(current);
     notifyListeners();
   }
 
